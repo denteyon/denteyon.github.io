@@ -120,12 +120,12 @@ body {
     top: -10px;
   }
 }
-.down,
+.chevron-down,
 .icons-header,
 .user {
   text-align: center;
 }
-.down {
+.chevron-down {
   color: #fff;
   position: absolute;
   bottom: 25px;
@@ -135,7 +135,7 @@ body {
   margin: 0 auto;
   font-size: 30px;
 }
-.down .icon {
+.chevron-down .icon {
   position: absolute;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -149,8 +149,8 @@ body {
   -webkit-animation: bounce 2s infinite;
   animation: bounce 2s infinite;
 }
-.down .icon:active,
-.down .icon:hover,
+.chevron-down .icon:active,
+.chevron-down .icon:hover,
 .footer a:active,
 .footer a:hover {
   color: #6b86a8;
