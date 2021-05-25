@@ -9,9 +9,9 @@ body {
 #bg {
   background: #272e3b;
   display: block;
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 100vh;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 .content {
   z-index: 1;
