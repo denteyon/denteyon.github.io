@@ -1,107 +1,93 @@
-var typed = new Typed('.site-description', {
-    strings: ['Hello!', 'You can call me Aung.', 'Software Engineer', 'Working Hard to Evolve'],
-    smartBackspace: true,
-    loop: true,
-    loopCount: Infinity,
-    typeSpeed: 60,
-    startDelay: 100,
-    backSpeed: 20,
-    shuffle: false,
-    backDelay: 1000,
+var typed = new Typed(".site-description", {
+  strings: [
+    "Hello!",
+    "You can call me Aung.",
+    "Software Engineer",
+    "Working Hard to Evolve",
+  ],
+  smartBackspace: true,
+  loop: true,
+  loopCount: Infinity,
+  typeSpeed: 60,
+  showCursor: true,
+  cursorChar: "|",
+  startDelay: 100,
+  backSpeed: 20,
+  shuffle: false,
+  backDelay: 1000,
 });
 
-// const canvas = document.getElementById("canvas");
-//     const c = canvas.getContext("2d");
-
-//     let w;
-//     let h;
-
-//     const setCanvasExtents = () => {
-//       w = document.body.clientWidth;
-//       h = document.body.clientHeight;
-//       canvas.width = w;
-//       canvas.height = h;
-//     };
-
-//     setCanvasExtents();
-
-//     window.onresize = () => {
-//       setCanvasExtents();
-//     };
-
-//     const makeStars = count => {
-//       const out = [];
-//       for (let i = 0; i < count; i++) {
-//         const s = {
-//           x: Math.random() * 1600 - 800,
-//           y: Math.random() * 900 - 450,
-//           z: Math.random() * 1000
-//         };
-//         out.push(s);
-//       }
-//       return out;
-//     };
-
-//     let stars = makeStars(10000);
-
-//     const clear = () => {
-//       c.fillStyle = "black";
-//       c.fillRect(0, 0, canvas.width, canvas.height);
-//     };
-
-//     const putPixel = (x, y, brightness) => {
-//       const intensity = brightness * 255;
-//       const rgb = "rgb(" + intensity + "," + intensity + "," + intensity + ")";
-//       c.fillStyle = rgb;
-//       c.fillRect(x, y, 1, 1);
-//     };
-
-//     const moveStars = distance => {
-//       const count = stars.length;
-//       for (var i = 0; i < count; i++) {
-//         const s = stars[i];
-//         s.z -= distance;
-//         while (s.z <= 1) {
-//           s.z += 1000;
-//         }
-//       }
-//     };
-
-//     let prevTime;
-//     const init = time => {
-//       prevTime = time;
-//       requestAnimationFrame(tick);
-//     };
-
-//     const tick = time => {
-//       let elapsed = time - prevTime;
-//       prevTime = time;
-
-//       moveStars(elapsed * 0.04);
-
-//       clear();
-
-//       const cx = w / 2;
-//       const cy = h / 2;
-
-//       const count = stars.length;
-//       for (var i = 0; i < count; i++) {
-//         const star = stars[i];
-
-//         const x = cx + star.x / (star.z * 0.001);
-//         const y = cy + star.y / (star.z * 0.001);
-
-//         if (x < 0 || x >= w || y < 0 || y >= h) {
-//           continue;
-//         }
-
-//         const d = star.z / 1000.0;
-//         const b = 1 - d * d;
-
-//         putPixel(x, y, b);
-//       }
-
-//       requestAnimationFrame(tick);
-//     };
-
-//     requestAnimationFrame(init);
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+    new SweetScroll({});
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 40, density: { enable: !0, value_area: 800 } },
+        color: { value: "#ffffff" },
+        shape: {
+          type: "polygon",
+          stroke: { width: 0, color: "#000000" },
+          polygon: { nb_sides: 5 },
+          image: { src: "img/github.svg", width: 100, height: 100 },
+        },
+        opacity: {
+          value: 0.5,
+          random: !1,
+          anim: { enable: !1, speed: 1, opacity_min: 0.1, sync: !1 },
+        },
+        size: {
+          value: 3,
+          random: !0,
+          anim: {
+            enable: !1,
+            speed: 19.18081918081918,
+            size_min: 0.1,
+            sync: !1,
+          },
+        },
+        line_linked: {
+          enable: !0,
+          distance: 150,
+          color: "#ffffff",
+          opacity: 0.4,
+          width: 1,
+        },
+        move: {
+          enable: !0,
+          speed: 4,
+          direction: "none",
+          random: !0,
+          straight: !1,
+          out_mode: "out",
+          bounce: !1,
+          attract: { enable: !1, rotateX: 600, rotateY: 1200 },
+        },
+        nb: 80,
+      },
+      interactivity: {
+        detect_on: "window",
+        events: {
+          onhover: { enable: !0, mode: "repulse" },
+          onclick: { enable: !0, mode: "push" },
+          resize: !0,
+        },
+        modes: {
+          grab: { distance: 400, line_linked: { opacity: 1 } },
+          bubble: {
+            distance: 400,
+            size: 40,
+            duration: 2,
+            opacity: 8,
+            speed: 3,
+          },
+          repulse: { distance: 200, duration: 0.4 },
+          push: { particles_nb: 4 },
+          remove: { particles_nb: 2 },
+        },
+      },
+      retina_detect: !0,
+    });
+  },
+  !1
+);
