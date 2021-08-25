@@ -91,3 +91,11 @@ document.addEventListener(
   },
   !1
 );
+var el1 = document.getElementsByClassName("gist-meta")[0];
+el1.remove();
+var el2 = document.getElementsByClassName("gist-file")[0];
+el2.classList.remove("gist-file");
+var el3 = document.getElementsByClassName("gist-data")[0];
+el3.setAttribute("border-bottom", "");
+var el4 = document.getElementsByClassName("gist")[0];
+el4.setAttribute("border-bottom", "");

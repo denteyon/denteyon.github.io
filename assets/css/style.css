@@ -52,6 +52,42 @@ body {
   height: 100vh !important;
 }
 
+.chevron-down,
+.icons-header,
+.user {
+  text-align: center;
+}
+.chevron-down {
+  color: #fff;
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 30px;
+}
+.chevron-down .icon {
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  fill: #fff;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
+.chevron-down .icon:active,
+.chevron-down .icon:hover,
+.footer a:active,
+.footer a:hover {
+  color: #6b86a8;
+}
+
 .content {
   z-index: 1;
   text-align: center;
@@ -329,4 +365,31 @@ body {
 .icon-email {
   background-color: #d66304;
   border-radius: 50%;
+}
+
+/* #about {
+  padding: 30px 20px;
+  margin: 0 auto;
+} */
+@media only screen and (min-width: 1000px) {
+  #about {
+    padding: 30px 10px;
+    width: 70%;
+    margin: 0 auto; 
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1000px) {
+  #about {
+    padding: 30px 10px;
+    width: 70%;
+    margin: 0 auto; /* Corresponds to 10% of the viewport width */
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  #about {
+    padding: 30px 20px;
+    margin: 0 auto; 
+  }
 }
