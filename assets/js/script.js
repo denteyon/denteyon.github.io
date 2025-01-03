@@ -88,14 +88,18 @@ document.addEventListener(
       },
       retina_detect: !0,
     });
+    var gistMetas = document.querySelectorAll('.gist-meta');
+  
+    gistMetas.forEach(meta => {
+        // Get all links within each .gist-meta
+        const links = meta.getElementsByTagName('a');
+        
+        // Check if there's a second link (index 1)
+        if (links[1]) {
+            links[1].textContent = 'denteyon/README.md';
+            links[1].href = 'https://github.com/denteyon/denteyon/blob/master/README.md';
+        }
+    });
   },
   !1
 );
-var el1 = document.getElementsByClassName("gist-meta")[0];
-el1.remove();
-var el2 = document.getElementsByClassName("gist-file")[0];
-el2.classList.remove("gist-file");
-var el3 = document.getElementsByClassName("gist-data")[0];
-el3.setAttribute("border-bottom", "");
-var el4 = document.getElementsByClassName("gist")[0];
-el4.setAttribute("border-bottom", "");

@@ -308,7 +308,7 @@ body {
 .footer {
   background: #1a222c;
   padding: 35px 0;
-  margin-top: 28px;
+  margin-top: 0;
   text-align: center;
   color: #fff;
 }
@@ -374,10 +374,34 @@ body {
 }
 
 #about {
+    position: relative;
     padding: 80px 0;
-    background: linear-gradient(135deg, #f8f9fa, #ffffff);
     margin: 0;
     width: 100%;
+    overflow: hidden;
+    background-image: url('/assets/img/background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Add an overlay to ensure text remains readable */
+#about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 34, 44, 0.9);
+    z-index: 1;
+}
+
+/* Ensure content stays above the overlay */
+#about > * {
+    position: relative;
+    z-index: 2;
 }
 
 .gist-container {
@@ -398,10 +422,21 @@ body {
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08) !important;
 }
 
+.gist .gist-file {
+  display: flex;
+  flex-direction: column;
+}
+
 .gist .gist-data {
     background-color: white !important;
-    border-radius: 16px !important;
+    border-radius: 0 0 16px 16px !important;
     padding: 30px !important;
+}
+
+.gist .gist-meta {
+  order: -1;
+  border-radius: 16px 16px 0 0 !important;
+  border-bottom: 1px solid #ddd;
 }
 
 /* Style the text content */
