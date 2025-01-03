@@ -372,3 +372,90 @@ body {
     margin: 0 auto; 
   }
 }
+
+#about {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa, #ffffff);
+    margin: 0;
+    width: 100%;
+}
+
+.gist-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Style the gist content */
+.gist {
+    border-radius: 16px !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.gist:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08) !important;
+}
+
+.gist .gist-data {
+    background-color: white !important;
+    border-radius: 16px !important;
+    padding: 30px !important;
+}
+
+/* Style the text content */
+.gist .blob-code-inner {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: #2d3748 !important;
+}
+
+/* Style links */
+.gist .blob-code-inner a {
+    color: #3182ce !important;
+    text-decoration: none !important;
+    transition: color 0.2s ease !important;
+}
+
+.gist .blob-code-inner a:hover {
+    color: #2c5282 !important;
+}
+
+/* Style headings */
+.gist .blob-code-inner strong {
+    color: #1a202c !important;
+    font-weight: 600 !important;
+}
+
+/* Style the technology badges */
+.gist .blob-code img {
+    border-radius: 4px !important;
+    margin: 2px !important;
+    transition: transform 0.2s ease !important;
+}
+
+.gist .blob-code img:hover {
+    transform: translateY(-1px) !important;
+}
+
+.footer-text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.fa-heart {
+  color: #e74c3c;
+  animation: heartbeat 1.5s ease infinite;
+  display: inline-block;
+  margin: 0 4px;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
